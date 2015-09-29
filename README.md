@@ -1,5 +1,5 @@
 # lrbd
-Simplifies iSCSI management of Ceph RBD images.  
+Simplifies iSCSI/FC management of Ceph RBD images.  
 
 The lrbd utility centrally stores the configuration in Ceph objects and executes the necessary rbd and targetcli commands to apply the stored configuration.
 
@@ -52,9 +52,9 @@ See [Wiki](https://github.com/swiftgist/lrbd/wiki)
 
 * What is a gateway?
 
-The gateway is simply a Linux host that supports iSCSI.  This host is providing iSCSI access to another host, a client or initiator, and is mapping Ceph RBD images locally.  Any client that cannot use Ceph directly (lack of library support), but supports iSCSI can still use Ceph storage.
+The gateway is simply a Linux host that supports iSCSI/FC.  This host is providing iSCSI/FC access to another host, a client or initiator, and is mapping Ceph RBD images locally.  Any client that cannot use Ceph directly (lack of library support), but supports iSCSI/FC can still use Ceph storage.
 
-One gateway can support multiple iSCSI targets which is primarily the reason for the distinction.
+One gateway can support multiple iSCSI/FC targets which is primarily the reason for the distinction.
 
 * Where should lrbd run?
 
